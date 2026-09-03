@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✈️ Бумажный Самолётик</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Самолётик (летает по экрану) -->
+    <div class="plane-container" id="planeContainer">
+        <div class="plane" id="plane">✈️</div>
+    </div>
+
+    <!-- Задний фон с картой (стилизованно) -->
+    <div class="map-background">
+        <div class="dot" style="top: 20%; left: 10%;"></div>
+        <div class="dot" style="top: 60%; left: 80%;"></div>
+        <div class="dot" style="top: 40%; left: 50%;"></div>
+        <div class="dot" style="top: 80%; left: 30%;"></div>
+        <div class="dot" style="top: 10%; left: 70%;"></div>
+        <!-- Линии-маршруты -->
+        <svg class="routes">
+            <line x1="10%" y1="20%" x2="80%" y2="60%" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+            <line x1="50%" y1="40%" x2="30%" y2="80%" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+            <line x1="70%" y1="10%" x2="50%" y2="40%" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <h1 class="title">
+            <span class="title-icon">✈️</span>
+            Бумажный Самолётик
+            <span class="title-sub">найди место для души</span>
+        </h1>
+
+        <button class="fly-btn" id="randomBtn">
+            <span class="btn-text">Запустить самолётик</span>
+            <span class="btn-icon">➜</span>
+        </button>
+
+        <!-- Карточка с результатом -->
+        <div class="card" id="infoCard">
+            <div class="card-badge" id="categoryBadge">🌍 Путешествие</div>
+            <h2 class="card-title" id="cityName">Где-то далеко...</h2>
+            <div class="card-distance" id="cardDistance">✈️ 0 км</div>
+            <p class="card-fact" id="cardFact">Нажми на кнопку, чтобы отправиться в путь</p>
+            <div class="card-vibe" id="cardVibe">✨</div>
+            <div class="card-footer">
+                <span id="cardRegion">🌎</span>
+                <span id="cardCountry"></span>
+            </div>
+        </div>
+
+        <!-- Счётчик мест -->
+        <div class="counter" id="counter">
+            <span id="totalPlaces">0</span> мест в коллекции
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
